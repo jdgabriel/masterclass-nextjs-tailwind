@@ -16,7 +16,7 @@ const tabs: Array<TabItemProps> = [
   { value: '10', title: 'API' },
 ]
 
-export default function SettingsTab() {
+export function SettingsTab() {
   const [currentTab, setCurrentTab] = useState(tabs[0].value)
   return (
     <Tabs.Root value={currentTab} onValueChange={setCurrentTab}>
