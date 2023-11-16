@@ -1,12 +1,14 @@
 'use client'
 import * as Tabs from '@radix-ui/react-tabs'
+import { motion } from 'framer-motion'
 
 export interface TabItemProps {
   value: string
   title: string
+  isSelected?: boolean
 }
 
-export function TabItem({ value, title }: TabItemProps) {
+export function TabItem({ value, title, isSelected = false }: TabItemProps) {
   return (
     <Tabs.Trigger
       value={value}
@@ -14,7 +16,12 @@ export function TabItem({ value, title }: TabItemProps) {
     >
       <span>{title}</span>
 
-      <div className="absolute -bottom-px left-0 right-0 h-0 bg-violet-500 group-data-[state=active]:h-0.5" />
+      {isSelected && (
+        <motion.div
+          layoutId="active-tab"
+          className="absolute -bottom-px left-0 right-0  h-0.5 bg-violet-500"
+        />
+      )}
     </Tabs.Trigger>
   )
 }
