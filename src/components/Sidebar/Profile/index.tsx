@@ -3,12 +3,12 @@ import { LogOut } from 'lucide-react'
 export function Profile() {
   return (
     <div className="grid-cols-profile grid items-center gap-3">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className="h-10 w-10 rounded-full"
         src="https://github.com/jdgabriel.png"
         alt="Image profile"
       />
-
       <div className="flex flex-col truncate">
         <span className="text-sm font-semibold text-zinc-700">
           Gabriel Duarte
