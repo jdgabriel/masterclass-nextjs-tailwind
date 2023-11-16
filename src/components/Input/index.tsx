@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 type InputPrefixProps = ComponentProps<'div'>
 
 export function InputPrefix(props: InputPrefixProps) {
-  return <div className="flex items-center" {...props} />
+  return <div className="flex items-center pt-0.5" {...props} />
 }
 
 type InputControlProps = ComponentProps<'input'>
@@ -11,7 +11,7 @@ type InputControlProps = ComponentProps<'input'>
 export function InputControl(props: InputControlProps) {
   return (
     <input
-      className="w-full border-0 bg-transparent p-0 text-zinc-300 placeholder-zinc-600"
+      className="w-full border-0 bg-transparent p-0 text-zinc-700 placeholder-zinc-400"
       {...props}
     />
   )
