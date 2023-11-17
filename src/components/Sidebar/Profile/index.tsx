@@ -3,7 +3,7 @@ import { LogOut } from 'lucide-react'
 
 export function Profile() {
   return (
-    <div className="grid-cols-profile grid items-center gap-3">
+    <div className="grid grid-cols-profile items-center gap-3">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className="h-10 w-10 rounded-full"
