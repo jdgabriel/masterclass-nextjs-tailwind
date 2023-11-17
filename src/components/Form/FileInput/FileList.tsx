@@ -11,7 +11,26 @@ export function InputFileList() {
   return (
     <div ref={parent} className="mt-4 space-y-3">
       {files.map((file) => (
-        <FileItem key={file.name} name={file.name} size={file.size} />
+        <>
+          <FileItem
+            key={file.name}
+            name={file.name}
+            size={file.size}
+            state="complete"
+          />
+          <FileItem
+            key={file.name}
+            name={file.name}
+            size={file.size}
+            state="progress"
+          />
+          <FileItem
+            key={file.name}
+            name={file.name}
+            size={file.size}
+            state="error"
+          />
+        </>
       ))}
     </div>
   )
