@@ -9,6 +9,7 @@ import { Profile } from './Profile'
 import { Input } from '../Form/Input'
 import * as Collapsible from '@radix-ui/react-collapsible'
 import { Button } from '../Button'
+import { ThemeSelector } from '../ThemeSelector'
 
 export function Sidebar() {
   return (
@@ -24,7 +25,7 @@ export function Sidebar() {
 
       <Collapsible.Content
         forceMount
-        className="mb-2 flex flex-1 flex-col gap-6 data-[state=closed]:hidden lg:data-[state=closed]:flex"
+        className="flex flex-1 flex-col gap-6 data-[state=closed]:hidden lg:data-[state=closed]:flex"
       >
         <Input.Root>
           <Input.Prefix>
@@ -44,7 +45,7 @@ export function Sidebar() {
           <UsedSpaceWidget />
 
           <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
-
+          <ThemeSelector />
           <Profile />
         </div>
       </Collapsible.Content>
